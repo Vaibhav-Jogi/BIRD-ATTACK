@@ -21,3 +21,9 @@ test('load login page', async ({ page }) => {
 	await loginPage.login(loginUsers.valid.username, loginUsers.valid.password);
 	await loginPage.expectLoggedIn();
 });
+
+test.only('test 3', async ({ page }) => {
+test.setTimeout(60000);
+await page.goto('https://gmail.com//');
+await page.locator('//*[@id="identifierId"]').fill('testing.gmail.com');
+});
